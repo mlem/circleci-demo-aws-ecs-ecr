@@ -1,0 +1,39 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "iam:GetRole",
+                "cloudformation:GetTemplate",
+                "cloudformation:CreateStack",
+                "cloudformation:DescribeStackEvents",
+                "cloudformation:DeleteStack",
+                "ecr:DescribeImages",
+                "iam:CreateRole",
+                "ecr:DescribeRepositories",
+                "ecs:DescribeClusters",
+                "ecr:ListTagsForResource",
+                "ecr:DeleteRepository"
+            ],
+            "Resource": [
+                "arn:aws:iam::*:role/*",
+                "arn:aws:cloudformation:eu-central-1:*:stack/*/*",
+                "arn:aws:ecs:eu-central-1:*:cluster/*",
+                "arn:aws:ecr:eu-central-1:*:repository/*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "ecs:DescribeClusters",
+                "ecr:CreateRepository",
+                "ec2:DeleteInternetGateway",
+                "ec2:DescribeInternetGateways"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
