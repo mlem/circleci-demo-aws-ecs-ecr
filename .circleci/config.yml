@@ -92,8 +92,9 @@ workflows:
   version: 2
   build-deploy:
     jobs:
-      context: demo-app
       - build
+          context: demo-app
       - deploy:
+          context: demo-app
           requires:
             - build
